@@ -72,8 +72,6 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="ButtonAtualizar" min="-2" pref="90" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="ButtonListar" min="-2" pref="90" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="ButtonExcluir" min="-2" pref="90" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -118,7 +116,6 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="ButtonNovo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ButtonAtualizar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ButtonListar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ButtonExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -181,11 +178,6 @@
         <Component class="javax.swing.JButton" name="ButtonAtualizar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Atualizar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="ButtonListar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Listar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="ButtonExcluir">
