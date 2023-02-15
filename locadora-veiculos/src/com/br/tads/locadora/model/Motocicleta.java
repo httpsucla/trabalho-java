@@ -17,14 +17,8 @@ public class Motocicleta extends Veiculo {
 
     private ModeloMotocicleta motocicleta;
 
-    private Motocicleta(ModeloMotocicleta motocicleta, Marca marca, Estado estado, Categoria categoria, double valorDeCompra, String placa, int ano) {
-        /*super(
-        marca,
-        estado,
-        categoria,
-        valorDeCompra,
-        placa,
-        ano);*/
+    private Motocicleta(ModeloMotocicleta motocicleta, Locacao locacao,Marca marca, Estado estado, Categoria categoria, double valorDeCompra, String placa, int ano) {
+        super(marca, estado, locacao, categoria, valorDeCompra, placa, ano);
         this.motocicleta = motocicleta;
     }
     
@@ -59,5 +53,5 @@ public class Motocicleta extends Veiculo {
         }
         return 0;
         
-    } 
+    }
 }
