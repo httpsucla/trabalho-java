@@ -8,12 +8,13 @@ import com.br.tads.locadora.model.enums.Categoria;
 import com.br.tads.locadora.model.enums.Estado;
 import com.br.tads.locadora.model.enums.Marca;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
  * @author paula
  */
-public abstract class Veiculo implements VeiculoI{
+public abstract class Veiculo implements VeiculoI {
 
     Marca marca;
     Estado estado;
@@ -22,11 +23,11 @@ public abstract class Veiculo implements VeiculoI{
     private double valorDeCompra;
     private String placa;
     private int ano;
-    
+
     public Veiculo() {
-        
+
     }
-    
+
     public Veiculo(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano) {
         this.marca = marca;
         this.estado = estado;
@@ -36,7 +37,7 @@ public abstract class Veiculo implements VeiculoI{
         this.placa = placa;
         this.ano = ano;
     }
-    
+
     public void locar(int dias, Object data, Cliente cliente) {
         this.estado = Estado.VENDIDO;
     }
@@ -58,7 +59,7 @@ public abstract class Veiculo implements VeiculoI{
 
     @Override
     public Marca getMarca() {
-       return marca;
+        return marca;
     }
 
     @Override
@@ -73,7 +74,7 @@ public abstract class Veiculo implements VeiculoI{
 
     @Override
     public String getPlaca() {
-        return placa; 
+        return placa;
     }
 
     @Override
@@ -83,17 +84,34 @@ public abstract class Veiculo implements VeiculoI{
 
     @Override
     public double getValorParaVenda() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        Calendar  calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        int anoAtual = calendar.get(Calendar.YEAR);
+        
+        int idadeVeiculoEmAnos = anoAtual - ano;
+
+        double valorParaVenda = valorDeCompra - (idadeVeiculoEmAnos * .15 * valorDeCompra);
+        
+        if(valorParaVenda < valorDeCompra* .1){
+            valorParaVenda = valorDeCompra* .1;
+        }
+        
+        return valorParaVenda;
     }
 
+    ;
+
     @Override
-    public double getValorDiariaLocacao() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    public abstract double getValorDiariaLocacao();
 
     @Override
     public void locar(int dias, Calendar data, Cliente cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.estado = Estado.LOCADO;
+
+        Locacao loca = new Locacao(dias, this.getValorDiariaLocacao(), data, cliente);
+
+        this.locacao = loca;
+
     }
-    
+
 }

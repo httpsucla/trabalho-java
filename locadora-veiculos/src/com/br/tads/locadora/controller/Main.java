@@ -4,7 +4,7 @@
  */
 package com.br.tads.locadora.controller;
 
-import com.br.tads.locadora.view.JanelaClienteView;
+import com.br.tads.locadora.view.TabbedView;
 
 /**
  *
@@ -17,7 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         
-        JanelaClienteView view = new JanelaClienteView();
+        TabbedView view = new TabbedView();
     }
     
 }

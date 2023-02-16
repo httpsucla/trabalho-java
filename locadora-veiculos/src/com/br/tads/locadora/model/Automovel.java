@@ -19,14 +19,8 @@ public class Automovel extends Veiculo{
     private ModeloAutomovel automovel;
  
     
-    public Automovel(ModeloAutomovel automovel, Marca marca, Estado estado, Categoria categoria, double valorDeCompra, String placa, int ano) {
-        /*super(
-        marca,
-        estado,
-        categoria,
-        valorDeCompra,
-        placa,
-        ano);*/
+    public Automovel(ModeloAutomovel automovel, Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDeCompra, String placa, int ano) {
+        super(marca, estado, locacao, categoria, valorDeCompra, placa, ano);
         this.automovel = automovel;
     }
     
