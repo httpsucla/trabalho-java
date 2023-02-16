@@ -30,6 +30,7 @@ public class ClienteComponent extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jTextField4 = new javax.swing.JTextField();
         ButtonNovo = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -44,6 +45,17 @@ public class ClienteComponent extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         ButtonListar = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 204, Short.MAX_VALUE)
+        );
 
         ButtonNovo.setText("Novo");
         ButtonNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -74,20 +86,19 @@ public class ClienteComponent extends javax.swing.JPanel {
         jLabel6.setText("RG");
 
         ButtonListar.setText("Listar");
-        ButtonListar.setActionCommand("Listar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(615, Short.MAX_VALUE)
+                .addComponent(ButtonListar)
+                .addGap(114, 114, 114))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
-                .addContainerGap(780, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ButtonListar)
-                .addGap(114, 114, 114))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -161,7 +172,7 @@ public class ClienteComponent extends javax.swing.JPanel {
     }//GEN-LAST:event_ButtonNovoActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-       // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
 
@@ -175,6 +186,7 @@ public class ClienteComponent extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -219,5 +231,9 @@ public class ClienteComponent extends javax.swing.JPanel {
 
     public void limparClienteAtualizar() {
         throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    public void mostrarListaClientes(List<Cliente> lista) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

@@ -4,6 +4,10 @@
  */
 package com.br.tads.locadora.view;
 
+import com.br.tads.locadora.controller.VendasController;
+import com.br.tads.locadora.model.Veiculo;
+import java.util.List;
+
 /**
  *
  * @author nilo-
@@ -141,4 +145,20 @@ public class VendasComponent extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private com.br.tads.locadora.view.tables.VenderTableView venderTableView1;
     // End of variables declaration//GEN-END:variables
+
+    public void setController(VendasController aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void initView() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public List<Veiculo> getVenderVeiculoView() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void listaAtualizadaView(List<Veiculo> veiculo) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
